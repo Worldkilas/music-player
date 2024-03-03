@@ -16,7 +16,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   //get the playlist provider
   late final dynamic playlistProvider;
-
   @override
   void initState() {
     super.initState();
@@ -49,7 +48,8 @@ class _HomePageState extends State<HomePage> {
                 //return list tile UI nested in an inkwell
                 return InkWell(
                   onTap: () {
-                    value.goToSong();
+                    final int songIndex = index;
+                    value.goToSong(songIndex);
                     //navigate
                     Navigator.push(
                         context,

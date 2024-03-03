@@ -12,7 +12,7 @@ class PlaylistProvider extends ChangeNotifier {
         audioPath: 'lib/assets/audios/Nicki_Minaj_-_Suge_DaBaby_Remix_.mp3'),
     //Song 2
     Song(
-        songName: 'Good for ou',
+        songName: 'Good for you',
         artistName: 'Olivia Rodrigo',
         albumArtImagePath: 'lib/assets/images/good for you.jpg',
         audioPath: 'lib/assets/audios/Olivia-Rodrigo-good-4-u.mp3'),
@@ -55,8 +55,7 @@ class PlaylistProvider extends ChangeNotifier {
   }
 
   //go to a song
-  void goToSong() {
-    int? songIndex;
+  void goToSong(int songIndex) {
     //update current song index
     _currentSongIndex = songIndex;
 
